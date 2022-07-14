@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  web:
+    #container_name: django-helloworld
+    image: django-helloworld
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000-8010:8000"
+
